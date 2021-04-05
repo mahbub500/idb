@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var cupup = new Image(); cupup.src = "1.jpg";
+		var cupDown = new Image(); cupDown.src = "2.jpg";
+		var alpha;
+		function interval(){
+			alpha = window.setInterval("document.cup.src=cupDown.src",3000);
+		}
+		function timeOut(){
+			window.setTimeout("document.cup.src=cupup.src",3000);
+			window.clearInterval(alpha);
+		}
+	</script>
+	<img src="1.jpg" height="200" width="200" alt="cup" name="cup">
+	<a href="#" onclick="interval()"> InterVal </a>
+	<a href="#" onclick="timeOut()"> Time Out </a>
+</body>
+</html>

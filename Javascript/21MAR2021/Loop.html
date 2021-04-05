@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+<h1>This is by For Loop </h1>
+	<script>
+		var vaihcal = [ "CAR", "MotoCycle", "Prado", "Cycle" ];
+		var text = "";
+
+		document.write( "<table  border = '1' > <th> Serial no </th>" );
+		document.write( " <th> Name </th>" );
+
+		var sl =1;		 
+		for (var i=0;i<vaihcal.length;i++) {
+			// document.write( text += vaihcal[i] + "<br>");
+			 // document.write(  vaihcal[i] + "<br>");		
+			 document.write( "<tr><td>"  + sl++ + " </td>" );		
+
+			document.write( "<td><p>" + vaihcal[i] +"</p></td></tr>");
+						
+		}
+			document.write("</table>");
+	</script> 
+	<h1>This is by While Loop </h1>
+
+<script>
+		var vaihcal = [ "CAR", "MotoCycle", "Prado", "Cycle" ];
+		var text = "";
+
+		document.write( "<table  border = '1' > <th> Serial no </th>" );
+		document.write( " <th> Name </th>" );
+		var sl =1;	
+		var i=0;	 
+		while (i<vaihcal.length) {
+			// document.write( text += vaihcal[i] + "<br>");
+			// document.write(  vaihcal[i] + "<br>");		
+			document.write( "<tr><td>"  + sl++ + " </td>" );		
+			document.write( "<td><p>" + vaihcal[i] +"</p></td></tr>");
+		i++
+						
+
+		}
+			document.write("</table>");
+	</script> 
+	  		
+			  
+			
+</body>
+</html>

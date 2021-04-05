@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>For IN Loop</title>
+</head>
+<body>
+	<script>
+		var person = {
+			FirstName:"Mahbub",
+			LastName: "Rahman",
+			Age: "26",
+			MobileNumber:"01715641187",
+		}
+		function myFunction(){
+		var x ;
+		var result = " ";
+		for (x in person){
+		result += person[x] + "<br>";
+
+		}
+		document.getElementById("show").innerHTML = result;
+
+		 }
+	</script>
+	<button type="button" onclick="myFunction()"> Click Here </button>
+	<p id="show"> Result will be here </p>
+</body>
+</html>

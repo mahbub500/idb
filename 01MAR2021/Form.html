@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Registration Form</title>
+</head>
+<body>
+	<h2>Registration Form</h2>
+	<form action="">
+		<fieldset>
+			<legend>Personal Information</legend>
+			<label for="name">Name : </label>
+			<input type="text" name="name" placeholder="Enter Your Name"><br>
+			<label for="Mobile">Phone :  </label>
+			<input type="text" name="Mobile" placeholder="Enter Your Phone Number"><br>
+			<label for="">Hobies</label>
+			<input type="checkbox" name="Cricket"> cricket
+			<input type="checkbox" name="FootBall"> FootBall
+
+			<br>
+			<label for="">Gender</label><br>
+			Male
+			<input type="radio" name="Gender">
+			Female <input type="radio" name="Gender"><br>
+			<label for="Address">Address :  </label>
+			<textarea name="address" id="" cols="20" rows="10"></textarea> <br>
+			<label for="birthday">Birthday:</label>
+			<input type="date" id="birthday" name="birthday"><br>
+			<label for="District">District:</label>
+			<select name="" id="">
+				<option value="">Select One </option>
+				<option value="Dhaka">Dhaka </option>
+				<option value="CTG">CTG </option>
+				<option value="Noakhali">Noakhali </option>
+				<option value="Barisal">Barisal </option>
+				<option value="Khulna">Khulna </option>
+
+			</select>
+			<select name="computer" id="">
+				<optgroup label="computer">
+					<option value="xyz2000"> The xyz 2000</option>
+					<option value="xyz2000"> The xyz 2000</option>
+					<option value="xyz2000"> The xyz 2000</option>
+				</optgroup>
+				<optgroup label="Mouse">
+					<option value="xyz2000"> The mouse 2000</option>
+					<option value="xyz2000"> The mouse 2000</option>
+					<option value="xyz2000"> The mouse 2000</option>
+				</optgroup>
+			</select>
+		</fieldset>
+		<fieldset>
+			<legend>Log-In Information</legend>
+			<label for="E-mail">E-mail :  </label>
+			<input type="E-mail" name="E-mail" placeholder="Enter Your E-mail"><br>
+			<label for="Password">Password :  </label>
+			<input type="Password" name="Password" placeholder="Enter Your Password"><br>
+			<label for="retypePassword">Repeat Password :  </label>
+			<input type="Password" name="retypePassword" placeholder="Enter Your Password Again">
+		</fieldset>
+		<input type="submit" name="submit" value="submit">
+	</form>
+</body>
+</html>

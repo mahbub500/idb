@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Form Array </title>
+</head>
+<body>
+	<script>
+		function factorial(){
+			var x = document.fac.number.value;
+			if (x < 0) {
+			    alert("Error! Factorial for negative number does not exist.");
+			}
+			// if number is 0
+			else if (x === 0) {
+			    alert("The factorial of " + x + "is 1.");
+			}
+
+			// if number is positive
+			else {
+			    var fact = 1;
+			    for (i = 1; i <= x; i++) {
+			        fact *= i;
+			    }		
+			}
+		document.getElementById('show').innerHTML= fact;			
+		}		
+	</script>
+	<p id="show"></p>
+	<form action="" name="fac">
+		<input type="number" name="number">
+		<input type="button" onclick="factorial()" value="Click">
+	</form>
+	<button >Click Here </button>
+	
+</body>
+</html>

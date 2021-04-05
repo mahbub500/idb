@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Form</title>
+	<style>
+		.table{
+			margin: auto;
+			margin-right: 400px;
+			border: 2px solid #5F126D;
+			height: 461px;
+			width: 396px;
+			font-size: 20px;
+		}
+		.legend{
+			border: 2px solid #5F126D;
+			background-color: orange;
+			color: white;
+		}
+		.extra{
+			background-color: #FFFDDF;
+		}
+	</style>
+</head>
+<body>
+	<form action=""  >
+		<fieldset >
+			<legend class="legend" >Novell Service Login</legend>
+			<table class="table">
+			<tr>
+				<td >User Name :</td>
+				<td colspan="2" > <input type="text"> </td>
+			</tr>
+			<tr>
+				<td >Passward</td>
+				<td colspan="2" > <input type="Passward" ></td>
+			</tr>
+			<tr>
+				<td>City of <br> Employment </td>
+				<td colspan="2"> <input type="text"> </td>
+			</tr>
+			<tr>
+				<td>Web Server </td>
+				<td> <select name="web" id="">
+					<option value="">-- choose a server</option>
+					<option value="">--Apache  </option>
+					<option value="">--Apache Ngins </option>
+					<option value="">--Apache Tomcat </option>
+				</select> </td>
+			</tr>
+			<tr>
+				<td> please specify <br> your role : </td>
+				<td>
+				 <input name="role" type="radio">  Admin  <br> 
+				 <input name="role" type="radio">  Enginner <br> 
+				 <input name="role" type="radio">  Manager  <br>
+				 <input name="role" type="radio">  Guest<br> </td>
+			</tr>
+			<tr>
+				<td> Single Sign-on <br> to the follwing</td>
+				<td> <input name="role" type="checkbox">  Mail  <br> 
+				 <input name="role" type="checkbox">  Payroll <br> 
+				 <input name="role" type="checkbox">  self-service  <br>
+				  </td>
+			</tr>
+		</table>
+		</fieldset>
+	</form>
+	
+
+
+
+
+
+	
+
+	
+	
+</body>
+</html>

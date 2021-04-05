@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JavaScript Function</title>
+</head>
+<body>
+	<script>
+		
+		 
+		function xyx()
+		{
+			var first = "Abdul";
+			var last = "alim";
+			var fullName = first + " " + last +"<br> ";
+			document.write(fullName);
+		}
+		 xyx();
+		 xyx();
+		 function welcome( name){
+		 	var x = name;
+		 	document.write(x + ": Welcome to Our World " +"<br> ");
+		 }
+		 welcome("Mahbub");
+		 welcome("Maruf");
+		 welcome("Mahtab");	
+
+	 	 function fullName (z) {
+	 	var x = prompt('Enter Your First Name');
+	 	var y = prompt('Enter Your Last Name');
+	 	var z = x + " "+ y;	 
+	 	// var a = document.write(z);	
+	 	document.getElementById('name').innerHTML= ("Your Name is : "+ z) ;
+		 }
+	</script>
+	<button onclick="fullName()" id="name" > Click here to show Your Name </button>
+
+	<script>
+		function fullname(){
+			var first = document.myform.first.value;
+			var last = document.myform.last.value;
+			var z = first +" "+ last ;
+			document.getElementById('show').innerHTML = z;
+		}
+	</script>
+
+	<form action="" name="myform">
+		<input type="text" name="first"><br>
+		<input type="text" name="last"><br>
+		<button type="button" onclick="fullname()">Click me</button>
+
+	</form>
+	<button  id="show" > Click To Show name </button>
+</body>
+</html>

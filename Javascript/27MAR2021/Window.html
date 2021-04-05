@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<button onclick="onpenWin()">Open Window </button>
+	<button  onclick="closeWin()">Close Window </button>
+	<button  onclick="checkWin()">check Window </button>
+	<script>
+		var myWidow;
+		function onpenWin(){
+			myWidow = window.open("","window1","width = 400,height = 200");
+			myWidow.document.write("Welcome to our Window");
+		}
+
+		function closeWin(){
+			myWidow.close();
+		}
+		function checkWin(){
+			if (!myWidow) {
+				alert(" Your Window already open");
+			}else{
+				if (!myWidow.closed) {
+					alert(" Mywin window is now open");
+				}else {
+					alert(" Mywin window is being closed");
+										
+				}
+			}
+		}
+	</script>
+</body>
+</html>

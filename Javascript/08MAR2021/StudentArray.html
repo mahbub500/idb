@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Student List</title>
+</head>
+<body>
+	<p>Click to show the Table </p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+	function myFunction() {
+		var student = ["Rohim","Korim","Sofique"];
+	    document.write( "<table border='1'><tr><th>Sn</th><th>Name</th></tr>" );
+	    var sn =1;
+	    for(var i=0; i<student.length;i++)
+	    {
+	    document.write("<tr><th>");
+	    document.write(sn); sn++;
+	    document.write("</th><th> ");
+	    document.write(student[i]);
+	    document.write("</th></tr>");    
+	    }
+	 document.write("</table>")   
+	}
+</script>
+
+
+</html>

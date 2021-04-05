@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// var total = new Function("item","tax","return item += tax");
+		var total = new Function("item","tax","return item += (item/100)*tax");
+		document.write("Your bill is $" + total (1000,5) +"<br>");		
+		var number = total.length;
+		document.write(number);		
+
+	</script>
+
+</body>
+</html>

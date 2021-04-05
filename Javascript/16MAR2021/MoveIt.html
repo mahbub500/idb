@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>To Lower Case </title>
+</head>
+<body onload="welcome()">
+	<script>
+		function welcome(){
+			var message = " Thanks for visiting this site.";
+			alert (message);
+		}
+	</script>
+	<script>
+		var score = 0 ;
+		function moveIt () {
+			var result = score += 1;
+			// document.myForm.myNumber.value = result;
+			document.getElementById("demo").innerHTML = result;
+		}
+
+	</script>
+<form name="myForm">
+	<!-- <input type="text" name="myNumber"> -->
+	<h1 id="demo"> Count Will be Here  </h1>
+
+</form>
+<a href="" onmouseover=" moveIt()">Move Your Mouse Here </a>
+<!-- <a href="" onmousemove =" moveIt()">Move Your Mouse Here </a> -->
+
+</body>
+</html>

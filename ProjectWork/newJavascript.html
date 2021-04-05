@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Form</title>
+	<style>
+		.form{
+			size: 50%;
+			margin-top: 40px;
+			margin-left: 400px;
+			margin-right: 400px;
+			border: 2px solid #5F126D;
+			height: 500px;
+			width: 400px;
+			background-color: #FDF2F7;
+
+		}
+		.legend{
+			border: 2px solid #5F126D;
+			background-color: orange;
+			color: white;
+		}
+		.extra{
+			background-color: #FFFDDF;
+		}
+	</style>
+
+
+</head>
+<body>
+<script>
+		function myFunction(){
+			with (document.myform) {
+			var name = name.value;
+			var Address = Address.value;
+			var Gender = Gender.value;
+			var District = District.value;
+		}
+		var checkboxes = document.getElementsByName('hoby');
+		var selected = [];
+		for (var i=0; i<checkboxes.length; i++) {
+			if (checkboxes[i].checked) {
+				selected.push(checkboxes[i].value);
+		}
+	}
+		document.getElementById("demo").innerHTML = "MY name is " + name +" "+"And my District is " + District +" "+ "and i am " + Gender +" "+  "and my Address is " + Address + " MY Hobies is " + selected  ;
+			
+		}    
+	</script>
+	<form action="" class="regform" name="myform" >
+		<fieldset class="form">
+			<legend class="legend">This Is Sign Up Form </legend>
+			<table  class="table"  >
+				<tr>
+					<td>Name:</td>
+					<td colspan="2"><input  class="extra" type="name" name="name"></td>
+				</tr>
+				<tr>
+					<td>Address:</td>
+					<td colspan="2"><input class="extra" type="Address" name="Address"></td>
+				</tr>			
+				<tr>
+					<td>Gender:</td>
+					<td><input type="radio" name="Gender" value="Male">Male</td>
+					<td><input type="radio" name="Gender" value="Female">Female</td>
+					<td><input type="radio" name="Gender" value="Other">Other</td>
+				</tr>
+				<tr>
+					<td>Select District:</td>
+					<td colspan="2">
+						<select name="District" id="">
+							<option name="District" value="">--Select--</option>
+							<option name="District" value="Noakhali">Noakhali</option>
+							<option name="District" value="Dhaka">Dhaka</option>
+							<option name="District" value="CTG">CTG</option>
+							<option name="District" value="Barishal">Barishal</option>
+							<option name="District" value="Syled">Syled</option>
+							<option name="District" value="uae">UAE</option>
+						</select>
+				     </td>
+				</tr>
+				<tr>
+					<td>Hobby:</td>
+					<td><input type="checkbox" name="hoby" value="cricket">Cricket</td> 
+					<td><input type="checkbox" name="hoby" value="football">Football</td> 
+					<td><input type="checkbox" name="hoby" value="table tennis">table tennis</td>
+					<td><input type="checkbox" name="hoby" value="badminton">badminton</td> 
+				</tr>
+				<tr>
+					<td> </td>
+					<td>
+					<button type="button" onclick=" myFunction()" value="Submit" > Submit </button>
+					</td>
+					<td align="right"><input  type="reset" value="Reset"></td>
+				</tr>
+			</table>
+		</fieldset>
+	</form>	
+	<p id="demo"> All Text Will be here </p>
+</body>
+</html>

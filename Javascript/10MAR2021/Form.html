@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+<!-- 	<h1> Click to show Your Result</h1>
+	<button onclick="result();"> Clink Me</button>
+	<p id="demo"> Your Result is  </p>
+<script>
+	
+	function result() {
+		var mark=prompt("Enter Your Marks");
+		if( mark >= 80)
+		 {
+			document.getElementById("demo").innerHTML = ("You Got (A+)");
+		} else if(mark < 80 )
+		{
+			document.getElementById("demo").innerHTML = ("You (Fail)");
+		} else{
+			document.getElementById("demo").innerHTML =("Wrong Entry");
+		}
+	}
+</script>
+<form action="" name="myform">
+	<input type="text" name="mynumber">
+	<input type="button" onclick="myFunction()" value="Check result" >
+</form>
+<script>
+	function myFunction(){
+		var x = document.myform.mynumber.value;
+		if( x >= 80 && x <=100)
+		 {
+			document.getElementById("y").innerHTML = ("You Got (A+)");
+		} else if(x < 80 )
+		{
+			document.getElementById("y").innerHTML = ("You (Fail)");
+		} else{
+			document.getElementById("y").innerHTML =("Wrong Entry");
+		}
+	}
+</script>
+
+<p id="y"> Your Result is  </p>
+ -->
+<script>
+	
+	function fullName(){
+		var Fname = document.welcome.FirstName.value; 
+	   var lname = document.welcome.LastName.value; 
+		var FullName = Fname + lname;
+		 document.getElementById("demo1").innerHTML = FullName + " Welcome Now Your Are Our Coustomer" ;
+		// document.write( FullName + " Welcome Now Your Are Our Coustomer" );
+	}
+</script>
+<form action="" name="welcome">
+	<label for="First Name"> Enter Your First Name</label>
+	<input type="text" name="FirstName"><br>
+	<label for="Last Name"> Enter Your last Name</label> 
+	<input type="text"  name="LastName">
+	<button type="button" onclick="fullName();" > Submit Your Name</button>
+	<!-- <input type="button" onclick="fullName()" value="Submit" >  -->
+</form>
+
+<p id="demo1" > Here goes your result</p>
+</body>
+</html>

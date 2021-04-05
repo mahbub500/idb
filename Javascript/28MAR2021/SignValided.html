@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Form Array </title>
+</head>
+<body>
+	<script>
+		function allfields(){
+			var email = document.regiatration.Email.value;
+			var pass = document.regiatration.Password.value.length;
+			var patern = email.search(/[a-zA-Z]+@[a-zA-Z]+\.[a-zA-Z]{2,3}/);
+		// 	if(patern==-1){
+		// 		alert("email Adderesss is invalid");
+		// 	}else{
+		// 		alert("all data are valided");
+
+		// 	}
+
+			
+		// }
+
+			
+	</script>
+	<p id="show"></p>
+	<form action="" name="regiatration">
+		Name:<br>
+		<input type="email" name="Email"> <br>
+		Father's Name: <br>
+		<input type="Password" name="Password"> <br>
+		<input type="button" value="submit" onclick="allfields()">
+
+	
+	</form>
+</body>
+</html>

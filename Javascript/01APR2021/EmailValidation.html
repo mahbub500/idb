@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Form Array </title>
+</head>
+<body>
+	<script>
+		function allfields(){
+			var email = prompt('Enter Your Email');
+			var patern = email.search(/[a-zA-Z]+[0-9]+@[a-zA-Z]+\.[a-zA-Z]{2,3}/);
+			var status = false;
+			if(patern ==-1){
+				alert("email Adderesss is invalid");
+				status = false;
+			}else{
+			status = true;
+			alert("Thanks Your email Adderesss is Valid");
+			}
+		}			
+	</script>
+	<p id="show"></p>
+	<button onclick="allfields()">Click Here </button>
+	
+</body>
+</html>

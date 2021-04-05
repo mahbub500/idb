@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Form Array </title>
+</head>
+<body>
+	<script>
+		function getFlover(){
+				var scoop = document.iceCream.flovers;	
+				var cone = scoop.options[scoop.selectedIndex].text;
+				if(cone !="Flover Menu"){
+					alert("Here\'s your " + cone + "ice crem cone!")
+				}	
+		}			
+	</script>
+	<p id="show"></p>
+	<h1> Select your flover fromthe menu</h1>
+	<form action="submit.php" method="post" name="iceCream" >
+		<select onchange="getFlover()" name="flovers"  id="">
+			<option name=" dummy" value="null"> Flover Menu </option>
+			<option value=""> Peach </option>
+			<option value=""> Peppermint </option>
+			<option value=""> Rum Raisin </option>
+		</select>
+
+	
+	</form>
+</body>
+</html>

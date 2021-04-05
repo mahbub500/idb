@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Form Array </title>
+</head>
+<body>
+	<script>
+		function allfields(){
+			var email = document.regiatration.Email.value;
+			var pass = document.regiatration.Password.value.length;
+			var patern = email.search(/[a-zA-Z]+@[a-zA-Z]+\.[a-zA-Z]{2,3}/);
+			var status = false;
+			if(patern ==-1){
+				alert("email Adderesss is invalid");
+				status = false;
+			}else{
+			status = true;
+			}
+			if(pass<5){
+				alert("Password Must be 5 Character");
+				status = false;
+			}else{
+				status = true;
+			}
+			if (status==true) {
+						alert("All data are Valided");
+			}
+			
+		}
+
+			
+	</script>
+	<p id="show"></p>
+	<form action="" name="regiatration">
+		Email:<br>
+		<input type="email" name="Email"> <br>
+		Your Password: <br>
+		<input type="Password" name="Password"> <br>
+		<input type="button" value="submit" onclick="allfields()">
+
+	
+	</form>
+</body>
+</html>

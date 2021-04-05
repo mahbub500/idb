@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Roll Over</title>
+</head>
+<body>
+	<script>
+		var sample1 = new Image()
+		sample1.src ="img/2.jpg"
+		var sample2 = new Image()
+		sample2.src= "img/3.jpg"
+
+		function switch1() {
+			document.sample.src = sample1.src
+		}
+		function switch2() {
+			document.sample.src = sample2.src
+		}
+		function switch3() {
+			document.photo.src = "img/3.jpg"
+		}
+		function switch4() {
+			document.photo.src = "img/4.jpg"
+		}
+	</script>
+	<a href="#" onMouseOver="switch2()" onMouseOut="switch1()">
+		<img src="img/1.jpg" name="sample" alt="img" border="1" width="300px" height="200px">
+	</a>
+	<a href="#" onclick="switch3()" ondblclick="switch4()" >
+		<img src="img/5.jpg" name="photo" alt="img" border="1" width="300px" height="200px">
+	</a>
+</body>
+</body>
+</html>

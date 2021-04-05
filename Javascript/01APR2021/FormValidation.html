@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Form Array </title>
+</head>
+<body>
+	<script>
+		 function reset(){  
+   			document.MyForm.reset();  
+ 			}   
+		function validation(){
+			var yourID = document.MyForm.id.value;
+			var yourName = document.MyForm.yourName.value;
+			var courseName = document.MyForm.Course.value;
+			var yearName = document.MyForm.year.value;
+
+			if(yourID =="" ){
+			 alert(" Please enter your Id Nubmer");
+			 return false;
+			}else if(yourName == "" ){
+			 alert(" Please enter your name");			 	 
+			 return true;
+			}else if (courseName=="") {
+				alert(" Please enter your Course Name");
+				return true;
+			}else if (yearName=="") {
+				alert(" Please enter your Year Name");
+				return true;
+			}
+			//  document.getElementById('show').innerHTML =( "HI " + yourName + " Your ID is " + yourID + " Your Course Name  is " + courseName + " Finaly your Course year is " + yourName);
+			var x =(  "HI " + yourName + "<br> " + " Your ID is : " + yourID + "<br> " + " Your Course Name  is : " + courseName + "<br> " + " Finaly your Course year is : " + yearName);
+
+			myWidow = window.open("","window1","width = 400,height = 200");
+			myWidow.document.write(x);
+			return true;
+
+			
+		}			
+	</script>
+	<p id="show"></p>
+	<form action="" method="post" name="MyForm" onload="reset()"  >
+		Id:<br>
+		<input type="number" value="" name="id"> <br>
+		Your Name: <br>
+		<input type="text" value="" name="yourName"> <br>
+		Course:<br>
+		<input type="text" value="" name="Course"> <br>
+		Year/Section: <br>
+		<input type="number" value="" name="year"> <br>
+		<input type="button" value="submit" onclick="validation()" >
+		<!-- <input type="button" value="reset" > -->
+
+	
+	</form>
+</body>
+</html>

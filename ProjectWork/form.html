@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Form</title>
+	<style>
+		.form{
+			size: 50%;
+			margin-top: 40px;
+			margin-left: 400px;
+			margin-right: 400px;
+			border: 2px solid #5F126D;
+			height: 500px;
+			width: 400px;
+			background-color: #FDF2F7;
+
+		}
+		.legend{
+			border: 2px solid #5F126D;
+			background-color: orange;
+			color: white;
+		}
+		.extra{
+			background-color: #FFFDDF;
+		}
+	</style>
+</head>
+<body>
+	<form action="" class="regform" >
+		<fieldset class="form">
+			<legend class="legend">This Is My Form</legend>
+			<table class="table">
+				<tr>
+					<td>Email:</td>
+					<td colspan="2"><input  class="extra" type="email" name="email"></td>
+				</tr>
+				<tr>
+					<td>Password:</td>
+					<td colspan="2"><input class="extra" type="password" name="pass"></td>
+				</tr>
+				<tr>
+					<td>Confirm Password:</td>
+					<td colspan="2"><input  class="extra" type="password" name="conpass"></td>
+				</tr>
+				<tr>
+					<td>Upload Your Picture:</td>
+					<td colspan="2"><input type="file" name="picture"></td>
+				</tr>
+				<tr>
+					<td>Gender:</td>
+					<td><input type="radio" name="sex" value="M">Male</td>
+					<td><input type="radio" name="sex" value="F">Female</td>
+				</tr>
+				<tr>
+					<td>Select Country:</td>
+					<td colspan="2">
+						<select name="country" id="">
+							<option value="">--Select--</option>
+							<option value="bd">Bangladesh</option>
+							<option value="ug">Uganda</option>
+							<option value="pk">Pakistan</option>
+							<option value="uk">Uk</option>
+							<option value="us">US</option>
+							<option value="uae">UAE</option>
+						
+					    </select>
+				     </td>
+				</tr>
+				<tr>
+					<td>Hobby:</td>
+					<td><input type="checkbox" name="hoby" value="cricket">Cricket</td> 
+					<td><input type="checkbox" name="hoby" value="football">Football</td> 
+				</tr>
+				<tr>
+					<td>Address:</td>
+					<td colspan="2"><textarea  class="extra" name="" id="" cols="30" rows="10"></textarea></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td align="right"><input type="reset" value="Reset"></td>
+					<td><input type="submit" value="Submit"></td>
+				</tr>
+			</table>
+		</fieldset>
+	</form>
+	
+
+
+
+
+
+	
+
+	
+	
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		 
+		function numberAdd(){			
+		x =  parseFloat (document.form.firstNumber.value);
+		y =  parseFloat (document.form.lastNumber.value);
+		document.getElementById("demo").innerHTML = "The result is " + (x + y);
+		}
+
+		function numbersub(){			
+		x = document.form.firstNumber.value;
+		y = document.form.lastNumber.value;
+		document.getElementById("demo").innerHTML = "The result is " + (x - y);
+		}
+
+		function numberMal(){			
+		x = document.form.firstNumber.value;
+		y = document.form.lastNumber.value;
+		document.getElementById("demo").innerHTML = "The result is " + (x * y);
+		}
+
+		function numberDiv(){			
+		x = document.form.firstNumber.value;
+		y = document.form.lastNumber.value;
+		document.getElementById("demo").innerHTML = "The result is " + (x/y);
+		}
+		
+		
+		
+		
+
+
+	</script>
+	<form action="" name="form">
+		<label for="firstNumber" > Enter first Input</label> 
+		<input type="text" name="firstNumber"> <br>
+		<label for="firstNumber" > Enter Second Input</label>
+		<input type="text"  name="lastNumber">
+		<button type="button" onclick="numberAdd()"> Add </button>
+		<button type="button" onclick="numbersub()"> Subtration </button>
+		<button type="button" onclick="numberMal()"> Maltifly </button>
+		<button type="button" onclick="numberDiv()"> Divition </button>
+		
+
+		<h1 id="demo">The result is </h1>
+	</form>
+</body>
+</html>

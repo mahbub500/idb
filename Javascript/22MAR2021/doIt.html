@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body >
+	<script>
+		function doIt(){
+			window.document.form.puupy.value =" Swissy";
+			window.document.form.clicker.value =" I\'ve been clicked";
+		}	
+
+		function reset(){
+			window.document.form.reset();
+		}
+
+	</script>
+	<form action="" name="form">
+		<input type="text" name="puupy">
+		<input type="button" name="clicker" value="Click Here" onclick="doIt()" >
+		<input type="button" name="clicker" value="Reset" onclick="reset()" >
+	</form>
+</body>
+</html>

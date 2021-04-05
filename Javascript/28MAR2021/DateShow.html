@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Form</title>
+	<style>
+		.form{
+			size: 50%;
+			margin-top: 40px;
+			margin-left: 400px;
+			margin-right: 400px;
+			border: 2px solid #5F126D;
+			height: 500px;
+			width: 400px;
+			background-color: #FDF2F7;
+
+		}
+		.legend{
+			border: 2px solid #5F126D;
+			background-color: orange;
+			color: white;
+		}
+		.extra{
+			background-color: #FFFDDF;
+		}
+	</style>
+	<script>
+		function showResult(){
+
+		var NewDate = document.regform.date.value;
+		var dateEntered = new Date(NewDate);
+		var y = dateEntered.getFullYear();
+		var m = dateEntered.getDate();
+		var f = dateEntered.getMonth();
+		var month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+		var mo = month[dateEntered.getMonth()];
+		// document.getElementById("show").innerHTML = " Your BirthDay Year Is : " + y + "<br>";
+		// document.getElementById("show").innerHTML = " Your BirthDay Month Is : " + m + "<br>";
+	
+		document.write(" Your have Month  : " + mo+ "<br>");
+
+		document.write(" Your have Entered  : " + NewDate + "<br>");
+		
+		document.write(" Your BirthDay Year Is : " + y + "<br>");
+		document.write(" Your BirthDay Date Is : " + m + "<br>");
+		// document.write(" Your MCQ Marks is : " + mcq+ "<br>");
+		// document.write(" Your MCQ Desctiptive is : " + des + "<br>");
+		// document.write(" Your MCQ Evidence is : " + evi + "<br>");
+		 // var equal = ;
+		
+		// if( mcq >= 80  && des >=60 && evi>=60){
+		// 	// document.write(" Your are Pass ");
+		// document.getElementById("show").innerHTML = "Your are Pass";
+		// }else{
+		// 	// document.write(" Your are Fail ");
+		// document.getElementById("show").innerHTML = "Your are Fail";
+		// }
+		}
+	</script>
+</head>
+<body>
+	<p id="show"></p>
+	<form action="" name="regform" class="regform" >
+		<fieldset class="form">
+			<legend class="legend">This Is My Form</legend>
+			<table class="table">
+				<tr>
+					<td>Enter Nubur of MCQ:</td>
+					<td colspan="2"><input value=""  class="extra" type="date" name="date"></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td align="right"><input type="reset" value="Reset"></td>
+					<td><input onclick="showResult()" type="button" value="Submit"></td>
+				</tr>
+			</table>
+		</fieldset>
+	</form>	
+</body>
+</html>

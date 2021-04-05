@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Form</title>
+	<style>
+		.form{
+			size: 50%;
+			margin-top: 40px;
+			margin-left: 400px;
+			margin-right: 400px;
+			border: 2px solid #5F126D;
+			height: 400px;
+			width: 400px;
+			background-color: #FDF2F7;
+		}
+		.legend{
+			border: 2px solid #5F126D;
+			background-color: orange;
+			color: white;
+		}
+		.extra{
+			background-color: #FFFDDF;
+		}
+	</style>
+</head>
+<body>
+	<script>
+		function info() {
+			var sid = document.myform.id.value;
+			var sname = document.myform.name.value;
+			var sround = document.myform.Round.value;
+			var sGender = document.myform.Gender.value;
+			var Education = document.getElementsByClassName('Education');
+			// var sHSC = document.myform.HSC.value;
+
+			var output='';
+			for(i=0;i<Education.length; i++){
+				if(Education[i].checked){
+					output += Education[i].value+",";
+				}
+			}
+
+			var display = "Student ID: " + sid + "<br>";
+			display += "Srudent Name: " + sname + "<br>";
+			display += "Srudent Round: " + sround + "<br>";
+			display += "Srudent Gender: " + sGender + "<br>";
+			display += "Srudent Education: " + output + "<br>";
+		
+
+			var win = window.open("","myWindow","height=300, width=500");
+			win.document.write(display);
+		}
+	</script>
+	<form action="" name="myform"  >
+		<fieldset class="form">
+			<legend class="legend">Student Registration Form</legend>
+			<table class="table">
+				<tr>
+					<td>ID:</td>
+					<td colspan="2"><input  class="extra" type="text" name="id"></td>
+				</tr>
+				<tr>
+					<td>Name:</td>
+					<td colspan="2"><textarea  class="extra" name="name" id="" cols="22" rows="5"></textarea></td>
+				</tr>
+				<tr>
+					<td>Select Your Round:</td>
+					<td colspan="2">
+						<select name="Round" id="">
+							<option value="">--Select--</option>
+							<option value="42">42</option>
+							<option value="43">43</option>
+							<option value="44">44</option>
+							<option value="45">45</option>
+							<option value="46">46</option>
+							<option value="47">47</option>
+						
+					    </select>
+				     </td>
+				</tr>
+				<tr>
+					<td>Gender:</td>
+					<td><input type="radio" name="Gender" value="M">Male</td>
+					<td><input type="radio" name="Gender" value="F">Female</td>
+				</tr>
+
+				<tr>
+					<td>Education:</td>
+					<td><input type="checkbox" class="Education" name="SSC" value="SSC">SSC</td> 
+					<td><input type="checkbox" class="Education" name="HSC" value="HSC">HSC</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input onclick="info()"  type="button" value="Submit"></td>
+					<td ><input type="reset" value="Reset"></td>
+				</tr>
+			</table>
+		</fieldset>
+	</form>	
+</body>
+</html>

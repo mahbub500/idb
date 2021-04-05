@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Check box</title>
+</head>
+<body>
+	<script>
+		function getMessage(){
+			var x = document.myForm.name.value;
+			var y = document.myForm.Hobbies[].value;
+			alert(y);
+		}
+	</script>
+	
+	<form action="" name="myForm">
+		<input type="text" name="name"><br>
+		<label for="hobbies"> Hobbies:</label><br>
+		<input type="checkbox" name="Hobbies" value="FootBall" ><label for="FootBall">FootBall</label>
+		<input type="checkbox" name="Hobbies" value="Cricket" ><label for="Cricket">Cricket</label>
+		<input type="checkbox" name="Hobbies" value="Hocky" ><label for="Hocky">Hocky</label> <br>
+		<input type="button" onclick="getMessage()" value="Submit">
+		<input type="reset"  value="Reset">
+	</form>
+</body>
+</html>
