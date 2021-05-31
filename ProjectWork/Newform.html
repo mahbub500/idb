@@ -24,58 +24,50 @@
 	</style>
 </head>
 <body>
-	<form action=""  >
+	<form action="" name="myForm"  >
 		<fieldset >
 			<legend class="legend" >Novell Service Login</legend>
 			<table class="table">
 			<tr>
 				<td >User Name :</td>
-				<td colspan="2" > <input type="text"> </td>
+				<td colspan="2" > <input type="text" name="fullname"> </td>
 			</tr>
 			<tr>
 				<td >Passward</td>
-				<td colspan="2" > <input type="Passward" ></td>
+				<td colspan="2" > <input type="Passward" name="Passward" ></td>
 			</tr>
 			<tr>
 				<td>City of <br> Employment </td>
-				<td colspan="2"> <input type="text"> </td>
+				<td colspan="2"> <input type="text" name="City"> </td>
 			</tr>
 			<tr>
 				<td>Web Server </td>
 				<td> <select name="web" id="">
-					<option value="">-- choose a server</option>
-					<option value="">--Apache  </option>
-					<option value="">--Apache Ngins </option>
-					<option value="">--Apache Tomcat </option>
+					<option name="web" value="">-- choose a server</option>
+					<option name="web" value="Apache">--Apache  </option>
+					<option name="web" value="Apache Ngins">--Apache Ngins </option>
+					<option name="web" value="Apache Tomcat">--Apache Tomcat </option>
 				</select> </td>
 			</tr>
 			<tr>
 				<td> please specify <br> your role : </td>
 				<td>
-				 <input name="role" type="radio">  Admin  <br> 
-				 <input name="role" type="radio">  Enginner <br> 
-				 <input name="role" type="radio">  Manager  <br>
-				 <input name="role" type="radio">  Guest<br> </td>
+				 <input name="role" value="Admin" type="radio">  Admin  <br> 
+				 <input name="role" value="Enginner" type="radio">  Enginner <br> 
+				 <input name="role" value="Manager" type="radio">  Manager  <br>
+				 <input name="role" value="Guest" type="radio">  Guest<br> </td>
 			</tr>
 			<tr>
 				<td> Single Sign-on <br> to the follwing</td>
-				<td> <input name="role" type="checkbox">  Mail  <br> 
-				 <input name="role" type="checkbox">  Payroll <br> 
-				 <input name="role" type="checkbox">  self-service  <br>
+				<td> <input name="role" value="Mail" type="checkbox">  Mail  <br> 
+				 <input name="role"  value="Payroll"	type="checkbox">  Payroll <br> 
+				 <input name="role"  value="self-service"	type="checkbox">  self-service  <br>
 				  </td>
 			</tr>
 		</table>
 		</fieldset>
+		<button type="submit" onclick="signUP()"> Sign</button>
 	</form>
-	
 
-
-
-
-
-	
-
-	
-	
 </body>
 </html>

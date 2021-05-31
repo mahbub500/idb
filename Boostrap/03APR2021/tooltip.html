@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<title>Document</title>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			
+	  <h3>Tooltip Example</h3>
+  <p>The data-placement attribute specifies the tooltip position.</p>
+  <ul class="list-inline">
+    <li><a href="#" data-toggle="tooltip" data-placement="top" title="Hooray!">Top</a></li>
+    <li><a href="#" data-toggle="tooltip" data-placement="bottom" title="Hooray!">Bottom</a></li>
+    <li><a href="#" data-toggle="tooltip" data-placement="left" title="Hooray!">Left</a></li>
+    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Hooray!">Right</a></li>
+  </ul>
+		</div>
+
+			<div class="figure">
+		<img src="flower.jpg" title="This is title " data-toggle="tooltip" alt="" style="height: 400px; width: 500px;">
+	</div>
+	</div>
+
+
+
+</body>
+
+<script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();
+});
+</script>
+</html>
