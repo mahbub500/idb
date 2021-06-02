@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Check a number is prime or not</title>
+</head>
+<body>
+ <script>
+
+	function prime() {
+	var n = document.MyForm.Prime.value;
+	  if (n===1)
+	  {
+		return alert("Not a prime number");
+	  }
+	  else if(n === 2)
+	  {
+		return n + " is a prime number";
+	  }else
+	  {
+		for(var x = 2; x < n; x++)
+		{
+		  if(n % x === 0)
+		  {
+			return "Not a prime number";
+		  }
+		}
+		return n + " is a prime number";  
+	  }
+}
+
+//console.log(test_prime(37));
+	 
+	 // document.write(test_prime(5));
+
+	
+
+</script>
+ <h1>Enter a number To check is it prime or not</h1>
+	<form action="" name="MyForm" onsubmit="prime()"  >
+		<input type="number" name="Prime">
+		<input type="submit" >
+	</form>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script>
+	function ValueTest1(){
+		var MidMcq = document.MyForm.midM.value;
+		var MidEvi = document.MyForm.midE.value;
+		var MonthMcq = document.MyForm.monthM.value;
+		var MonthEvi = document.MyForm.monthE.value;
+		var mcq = (( parseFloat(MidMcq*.20) +parseFloat(MonthMcq)*.80)) ;
+		var evi = (( parseFloat(MidEvi*.20) +parseFloat(MonthEvi)*.80)) ;
+
+		// var final = (mcq + evi);
+
+	 	console.log(  mcq);
+	 	console.log( evi);
+		if( mcq >= 30 &&  evi >=30 ){
+			alert (" You are Pass ");
+		}else{
+			alert(" You are Fail");
+		}		
+	}
+
+	</script>
+		
+</head>
+<body>
+	
+	<form action="" name="MyForm"   >
+		<h1>Mid Exam </h1>
+		<label for="mid"> Enter your mid Mcq number</label>
+		<input type="number" value="" name="midM">
+		<input type="number"  value="" name="midE">
+		<h1>Monthely Exam </h1>
+		<label for="mid"> Enter your Month Mcq number</label>
+		<input type="number" value="" name="monthM">
+		<input type="number" value="" name="monthE">
+		<input type="button" onclick="ValueTest1()"  value="Submit" >
+	</form>
+</body>
+</html>

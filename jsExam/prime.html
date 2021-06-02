@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 	<script>
-	function ValueTest(){
+	function ValueTest1(){
 		var x = document.MyForm.Prime.value;
 		if(x==0){
 		return " Blank or 0 Are Not Allowed";
@@ -22,12 +22,31 @@
 			return x + " is prime Number";
 		}
 	}
+	function prime(){
+		var x = document.MyForm.input.value;
+		if(x==0){
+			return "Blank or 0 are not Allowed";
+			return false;
+		}else if(x==1){
+			return x +"Is not Prime Number";
+			return false;
+		}else {
+			for(var i=1; i<x ; i++){
+				if (x%i==0) {
+					return x + " Is prime number";
+				}
+			}
+		}
+	}
+
+
 	</script>
 </head>
 <body>
-	<form action="" name="MyForm" onsubmit="alert(ValueTest())" >
+	<h1>Enter a number To check is it prime or not</h1>
+	<form action="" name="MyForm"  >
 		<input type="number" name="Prime">
-		<input type="submit">
+		<input type="submit" onclick="ValueTest1()">
 	</form>
 </body>
 </html>
