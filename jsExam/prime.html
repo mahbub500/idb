@@ -4,49 +4,55 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
-	<script>
-	function ValueTest1(){
-		var x = document.MyForm.Prime.value;
-		if(x==0){
-		return " Blank or 0 Are Not Allowed";
-		}else if (x==1) {
-			return x+ " Is not a prime number";
-		}else if (x==2) {
-			return x + " Is a prime number";
-		}else{
-			for(var i=2; i<x; i++){
-				if (x%i==0) {
-					return x + " Is Not Prime Number";
-				} 
-			} 
-			return x + " is prime Number";
+	<style>
+		div{
+			height: 300px;
+			width: 500px;
+			border: 3px solid red;
+			background-color: #ECE8E8;
+			margin-top: 150px;
+			margin-left: 400px;
+			text-align: center;
+			font-size: 20pt;
 		}
-	}
-	function prime(){
-		var x = document.MyForm.input.value;
-		if(x==0){
-			return "Blank or 0 are not Allowed";
-			return false;
-		}else if(x==1){
-			return x +"Is not Prime Number";
-			return false;
-		}else {
-			for(var i=1; i<x ; i++){
-				if (x%i==0) {
-					return x + " Is prime number";
-				}
-			}
+		h2{
+			color: #B13C09
 		}
-	}
-
-
-	</script>
+	</style>
 </head>
-<body>
-	<h1>Enter a number To check is it prime or not</h1>
-	<form action="" name="MyForm"  >
-		<input type="number" name="Prime">
-		<input type="submit" onclick="ValueTest1()">
+<body bgcolor="#1B0707">
+
+	<div>
+		<h2>Prime number testing</h2>
+	
+	<form action="" name="myform" onsubmit="alert(checkfun())">
+		<label for="number">Enter A Number</label>
+		<input type="text" name="number"><br><br>
+		<input type="submit" name="submit" value="Check">
+		<input type="reset" value="Clear">
 	</form>
+
+	</div>
+	<script>
+		function checkfun(){
+			var inpuT = document.myform.number.value;
+			//alert(inpuT)
+
+			if (inpuT==0) {
+				return "Blank or 0 value is not allowed"		
+			} else if (inpuT==1) {
+				return inpuT + " Is not a Prime Number"	
+			} else if (inpuT==2) {
+				return inpuT + " Is not A Prime Number"	
+			} else {
+				for(i=2; i<inpuT; i++){
+					if(inpuT%i==0) {
+						return inpuT + " is not a prime number"
+					}
+				} //for loop end
+				return inpuT + " is a prime number"
+			} //else end
+		} //function end
+	</script>
 </body>
 </html>
